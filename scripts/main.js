@@ -23,13 +23,15 @@ app.addEventListener("click", function(event){
 async function open_terminal(){
   createText("Welcome");
   await delay(700);
-  createText("Starting the server...");
+  createText("Starting virtual server...");
+  await delay(950);
+  createText("Connecting to [/96.1//.4/.1/0]...");
   await delay(1500);
-  createText("You can run several commands:");
+  createText("Known Commands");
  
-  createCode("about me", "Who am i and what do i do.");
-  createCode("all", "See all commands.");
-  createCode("social -a", "All my social networks.");
+  // createCode("about me", "Who am i and what do i do."); //
+  createCode("docs", "All public documents and information.");
+  createCode("help", "View all publically avaliable commands.");
 
   await delay(500);
   new_line();
@@ -44,7 +46,7 @@ function new_line(){
   p.setAttribute("class", "path")
   p.textContent = "# user";
   span1.textContent = " in";
-  span2.textContent = " ~/heber-leonard";
+  span2.textContent = " ~/not-found";
   p.appendChild(span1);
   p.appendChild(span2);
   app.appendChild(p);
@@ -68,15 +70,17 @@ function removeInput(){
 async function getInputValue(){
   
   const value = document.querySelector("input").value;
-  if(value === "all"){
+  if(value === "help"){
     trueValue(value);
     
-    createCode("projects", "My github page with my projects. Follow me there ;)");
-    createCode("about me", "Who am i and what do i do.");
-    createCode("social -a", "All my social networks.");
-    createCode("clear", "Clean the terminal.");
+    //createCode("projects", "My github page with my projects. Follow me there ;)");
+    //createCode("about me", "Who am i and what do i do.");
+    //createCode("social -a", "All my social networks.");
+    createCode("docs", "All public documents and information.");
+    createCode("clear", "Clear the terminal.");
     
   }
+  /*
   else if(value === "projects"){
     trueValue(value);
     createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
@@ -96,10 +100,24 @@ async function getInputValue(){
     trueValue(value);
     createText("Didn't you mean: social -a?")
   }
+  */
+  else if(value === "docs"){
+    trueValue(value);
+    createText("<a href='https://docs.google.com/document/d/15N9Hpp_UsPS3Rjvdl-i_OX1Akc4Pm3q5itr3-ntVpZE/edit?usp=sharing' target='_blank'><i class='fab fa-github white'></i> The Tales of Site-73 | Volume 1</a>")
+    createText("<a href='https://docs.google.com/document/d/191uwyoL13ftCcDSNFeXIvZXMSFrLPkS_nkoIJ08OhEM/edit?usp=sharing' target='_blank'><i class='fab fa-linkedin-in white'></i> The Tales of Site-73 | Volume 2</a>")
+  }
   
   else if(value === "clear"){
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
     document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
+  }
+  else if(value === "doc"){
+    trueValue(value);
+    createText("Didn't you mean: docs?")
+  }
+  else if(value === "clean"){
+    trueValue(value);
+    createText("Didn't you mean: clear?")
   }
   else{
     falseValue(value);
