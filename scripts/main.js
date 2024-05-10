@@ -25,12 +25,11 @@ async function open_terminal(){
   await delay(700);
   createText("Starting virtual server...");
   await delay(950);
-  createText("Connecting to [/96.1//.4/.1/0]...");
+  createText("Connecting to Blocky Systems...");
   await delay(1500);
   createText("Known Commands");
  
   // createCode("about me", "Who am i and what do i do."); //
-  createCode("docs", "All public documents and information.");
   createCode("help", "View all publically avaliable commands.");
 
   await delay(500);
@@ -101,23 +100,43 @@ async function getInputValue(){
     createText("Didn't you mean: social -a?")
   }
   */
-  else if(value === "docs"){
-    trueValue(value);
-    createText("<a href='https://docs.google.com/document/d/15N9Hpp_UsPS3Rjvdl-i_OX1Akc4Pm3q5itr3-ntVpZE/edit?usp=sharing' target='_blank'><i class='fab fa-github white'></i> The Tales of Site-73 | Volume 1</a>")
-    createText("<a href='https://docs.google.com/document/d/191uwyoL13ftCcDSNFeXIvZXMSFrLPkS_nkoIJ08OhEM/edit?usp=sharing' target='_blank'><i class='fab fa-linkedin-in white'></i> The Tales of Site-73 | Volume 2</a>")
-  }
-  
   else if(value === "clear"){
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
     document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
   }
-  else if(value === "doc"){
-    trueValue(value);
-    createText("Didn't you mean: docs?")
-  }
   else if(value === "clean"){
     trueValue(value);
     createText("Didn't you mean: clear?")
+  }
+  else if(value === "144.232.131.23"){
+    trueValue(value);
+    createText("Welcome");
+    await delay(700);
+    createText("Starting virtual server...");
+    await delay(950);
+    createText("Connecting to 144.232.131.23...");
+    await delay(1500);
+    createText("January 7th, 1978 - Documented ///////// #2:"); 
+    await delay(950);
+    createText("The combination of ///////// proposed a unique strain on the '/////'. An isolated breach occurred in Houser, Canada. Afterward, said location no longer existed-");
+    await delay(1500);
+    createText("Error");
+    await delay(1500);
+    createText("Unauthorized User has been removed.");
+    await delay(700);
+    createText("Welcome");
+    await delay(700);
+    createText("Starting virtual server...");
+    await delay(950);
+    createText("Connecting to Blocky Systems...");
+    await delay(1500);
+    createText("Known Commands");
+  
+    // createCode("about me", "Who am i and what do i do."); //
+    createCode("help", "View all publically avaliable commands.");
+
+    await delay(500);
+    new_line();
   }
   else{
     falseValue(value);
