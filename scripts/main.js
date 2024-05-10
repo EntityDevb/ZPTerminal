@@ -123,6 +123,9 @@ async function getInputValue(){
     createText("Error");
     await delay(1500);
     createText("Unauthorized User has been removed.");
+    await delay(2000);
+    document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
+    document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
     await delay(700);
     createText("Welcome");
     await delay(700);
