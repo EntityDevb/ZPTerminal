@@ -75,7 +75,7 @@ async function getInputValue(){
     //createCode("projects", "My github page with my projects. Follow me there ;)");
     //createCode("about me", "Who am i and what do i do.");
     //createCode("social -a", "All my social networks.");
-    createCode("docs", "All public documents and information.");
+    createCode("123.123.123.123", "Connect to any available IP!");
     createCode("clear", "Clear the terminal.");
     
   }
