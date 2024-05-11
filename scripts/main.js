@@ -31,6 +31,7 @@ async function open_terminal(){
  
   // createCode("about me", "Who am i and what do i do."); //
   createCode("help", "View all publically avaliable commands.");
+  createCode("123.123.123.123", "Connect to any available IP!");
 
   await delay(500);
   new_line();
@@ -141,6 +142,49 @@ async function getInputValue(){
     await delay(500);
     new_line();
   }
+  else if(value === "34.38.177.61"){
+    trueValue(value);
+    createText("Welcome");
+    await delay(700);
+    createText("Starting virtual server...");
+    await delay(950);
+    createText("Connecting to 34.38.177.61...");
+    await delay(1500);
+    createText("January 9th, 1978 - ////// Chat Log:"); 
+    await delay(950);
+    createText("//////: A FUCKING CITY DISAPPEARED.");
+    await delay(1500);
+    createText("//////: What? Where?");
+    await delay(950);
+    createText("//////: Houser, Canada.");
+    await delay(1500);
+    createText("//////: Whats that?");
+    await delay(950);
+    createText("//////: They hosted a FUCKING Olympics there...");
+    await delay(1500);
+    createText("//////: No?");
+    await delay(1500);
+    createText("Error");
+    await delay(1500);
+    createText("Unauthorized User has been removed.");
+    await delay(2000);
+    document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
+    document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
+    await delay(700);
+    createText("Welcome");
+    await delay(700);
+    createText("Starting virtual server...");
+    await delay(950);
+    createText("Connecting to Blocky Systems...");
+    await delay(1500);
+    createText("Known Commands");
+
+    // createCode("about me", "Who am i and what do i do."); //
+    createCode("help", "View all publically avaliable commands.");
+
+    await delay(500);
+    new_line();
+  }    
   else{
     falseValue(value);
     createText(`command not found: ${value}`)
