@@ -185,6 +185,7 @@ async function getInputValue(){
     await delay(500);
     new_line();
   }
+}
 
 function trueValue(value){
   
