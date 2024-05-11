@@ -185,7 +185,10 @@ async function getInputValue(){
     await delay(500);
     new_line();
   }
-}
+  else{
+    falseValue(value);
+    createText(`command not found: ${value}`)
+  }
 
 function trueValue(value){
   
